@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <>
-        <div className=' flex justify-around p-2 shadow-md bg-gray-100'>
+        <div className=' flex justify-around p-2 shadow-md bg-gray-100 sticky top-0 w-full z-20'>
             <div>
                 <h2 className='font-bold text-3xl'>Test Formatter📒</h2>
             </div>
