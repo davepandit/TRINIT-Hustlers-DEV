@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Exclude firebase.jsx in src/context
+src/context/firebase.jsx
