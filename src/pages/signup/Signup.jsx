@@ -4,16 +4,18 @@ import { useFirebase } from '../../context/Firebase'
 
 function Signup() {
     const [email , setEmail] = useState("")
-    const [password , setpassword] = useState("")
+    const [password , setPassword] = useState("")
 
     //establishing a link between the component and the context
 
     const firebase = useFirebase()
 
     //handleSubmit
-    const handleSubmit = async(e)=>{
+    const handleSubmit =(e)=>{
         e.preventDefault()
-        await firebase.SignUpUserWithEmailAndPassword(email , password ).then((result)=>(console.log("usersignup done")))
+        firebase.SignUpUserWithEmailAndPassword(email , password ).then((result)=>(alert("User Signed Up successfully"))).catch((value)=>(alert("Someting went wrong")))
+        setEmail("")
+        setPassword("")
         
 
 
@@ -40,7 +42,7 @@ function Signup() {
                     <input
                         type="password"
                         value={password}
-                        onChange={(e)=>(setpassword(e.target.value))}
+                        onChange={(e)=>(setPassword(e.target.value))}
                         className=' bg-gray-600 mb-4 px-2 py-2 w-full lg:w-[20em] rounded-lg text-white placeholder:text-gray-200 outline-none'
                         placeholder='Password'
                     />

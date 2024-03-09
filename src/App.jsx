@@ -22,6 +22,9 @@ function App() {
       <Route path='/privacy policy' element={<Privacy />} />
     </Routes>
     <Footer />
+    <Routes>
+      <Route path='/hi' element={<Terms />}/>
+    </Routes>
 
       
       
